@@ -4,6 +4,7 @@ import java.util.Iterator;
 
 public class BST<K extends Comparable<K>, V> {
     private Node root;
+    private int size;
     private class Node{
         private K key;
         private V value;
@@ -90,6 +91,7 @@ public class BST<K extends Comparable<K>, V> {
         return node;
     }
 
+
     private void inOrderTraversal(Node node, List<NodeData<K, V>> nodes) {
         if (node == null)
             return;
@@ -122,5 +124,8 @@ public class BST<K extends Comparable<K>, V> {
         public V getValue() {
             return value;
         }
+    }
+    public int size() {
+        return size;
     }
 }
