@@ -90,4 +90,22 @@ public class BST<K extends Comparable<K>, V> {
 
         return null;
     }
+
+    public static class NodeData<K, V> {
+        private K key;
+        private V value;
+
+        public NodeData(K key, V value) {
+            this.key = key;
+            this.value = value;
+        }
+
+        public K getKey() {
+            return key;
+        }
+
+        public V getValue() {
+            return value;
+        }
+    }
 }
